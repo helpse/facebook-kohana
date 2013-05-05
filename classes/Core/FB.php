@@ -2,6 +2,7 @@
 
 class Core_FB extends Facebook {
 	public $config;
+	protected static $instance = null;
 
 	public function __construct()
 	{
@@ -21,6 +22,15 @@ class Core_FB extends Facebook {
 			);
 		}
 		return parent::getLoginUrl($params);
+	}
+
+	static function instance()
+	{
+		if (!(self::$instance instanceof Core_FB))
+		{
+			self::$instance = new Core_FB;
+		}
+		return self::$instance;
 	}
 
 	static function factory()
