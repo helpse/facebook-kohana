@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Kohana_FB extends Facebook {
+class Core_FB extends Facebook {
 	
 	public $config;
 	
