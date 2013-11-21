@@ -1,7 +1,9 @@
-<?php
+<?php defined('SYSPATH') or die('No direct script access.');
 
-class Core_FB extends Facebook {
+class Kohana_FB extends Facebook {
+	
 	public $config;
+	
 	protected static $instance = null;
 
 	public function __construct()
@@ -26,7 +28,7 @@ class Core_FB extends Facebook {
 
 	static function instance()
 	{
-		if (!(self::$instance instanceof Core_FB))
+		if ( ! self::$instance instanceof Core_FB)
 		{
 			self::$instance = new Core_FB;
 		}
