@@ -25,7 +25,12 @@ class Core_FB extends Facebook {
 		}
 		return parent::getLoginUrl($params);
 	}
-
+	
+	public function get($url)
+	{
+		return $this->api($url, 'GET');
+	}
+	
 	static function instance()
 	{
 		if ( ! self::$instance instanceof Core_FB)
