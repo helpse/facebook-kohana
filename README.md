@@ -20,8 +20,8 @@ return array(
 	'sharedSession' => FALSE,
 	'params'        => array(
 		'display'      => 'popup',
-		'redirect_uri' => 'welcome/return',
-		'scope'        => 'email,manage_pages'
+		'redirect_uri' => '/example/index',
+		'scope'        => 'email,user_likes,friends_likes'
 	),
 );
 ```
