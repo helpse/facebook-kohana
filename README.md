@@ -9,6 +9,23 @@ The Facebook Platform is a set of APIs that make your app more social.
 
 This repository contains the open source PHP SDK that allows you to access Facebook Platform from your PHP app. Except as otherwise noted, the Facebook PHP SDK is licensed under the Apache Licence, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html).
 
+### Configuration
+
+You should modify config/FB.php which has the following structure:
+
+```
+return array(
+	'appId'         => '',
+	'secret'        => '',
+	'sharedSession' => FALSE,
+	'params'        => array(
+		'display'      => 'popup',
+		'redirect_uri' => 'welcome/return',
+		'scope'        => 'email,manage_pages'
+	),
+);
+```
+
 ### How to use it?
 
 On your page, you should either check if the user already allowed the application access, using `FB::instance()->getUser()`. This can be either in an AJAX call or your controller.
