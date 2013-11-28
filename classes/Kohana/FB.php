@@ -10,9 +10,9 @@ class Kohana_FB extends Facebook {
 	
 	/**
 	 *
-	 * @var  Kohana_FB  Singleton instance
+	 * @var  FB  Singleton instance
 	 */
-	protected static $instance = null;
+	public static $instance = null;
 
 	public function __construct()
 	{
