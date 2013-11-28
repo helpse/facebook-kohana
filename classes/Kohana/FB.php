@@ -63,11 +63,4 @@ class Kohana_FB extends Facebook {
 		return self::$instance;
 	}
 
-	/**
-	 * @return  FB
-	 */
-	public static function factory()
-	{
-		return new FB;
-	}
 }
