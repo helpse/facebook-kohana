@@ -34,4 +34,4 @@ If `FB::instance()->getUser()` returns `false`, you should either redirect or po
 
 The callback URL is `facebook/auth` by default, that issues `FB::instance()->getUser()` and `FB::instance->getAccessToken()` so you can use the user app data right away.
 
-Then issue your OpenGraph calls using `FB::instance()->get('')`. If you want to extend the FB class, extend `Core_FB`.
+Then issue your OpenGraph calls using `FB::instance()->get('')`. If you want to extend the FB class, extend `Kohana_FB`.
